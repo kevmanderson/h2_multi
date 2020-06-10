@@ -1,4 +1,4 @@
-function [h2, p_perm] = h2_mat(P, K, X, n_perm)
+function [h2, p_perm, jack_se] = h2_multi(P, K, X, n_perm, F)
 %%
 %
 % Heritability estimation from phenotypic and genetic similary mattrices
@@ -7,6 +7,7 @@ function [h2, p_perm] = h2_mat(P, K, X, n_perm)
 % P: an Nsubj x Nsubj phenotypic similarity matrix
 % K: an Nsubj x Nsubj genetic similarity matrix
 % X: an Nsubj x Ncov matrix of covariates
+% F: an Nsubj x 1 array of unique family IDs, used for jack-knife
 % n_perm: number of permutations; set Nperm = 0 if permutation inference is not needed
 %
 % Output:
