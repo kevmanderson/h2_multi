@@ -1,8 +1,8 @@
 
 
-% ------------------
-% set up paths/dirs
-% ------------------
+#####################
+# set up paths/dirs
+#####################
 source('/gpfs/milgram/project/holmes/kma52/h2_multi/R/h2_multi.R')
 base_dir = '/gpfs/milgram/project/holmes/kma52/h2_multi'
 
