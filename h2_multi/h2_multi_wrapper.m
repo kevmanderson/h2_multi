@@ -44,11 +44,3 @@ pheno = csvread(fullfile(base_dir, 'example_data', 'lh_overall_dice_P.csv'), 0);
 [h2, p_perm, jack_se] = h2_multi(pheno, kin, covar, 10, F);
 
 
-
-pheno = csvread(fullfile(base_dir, 'height_P.csv'), 0);
-[h2, p_perm] = h2_mat(pheno, kin, covar, 1000)
-
-out_mat = {};
-pheno = csvread(fullfile(base_dir, 'dice_net_12_P.csv'), 0);
-[h2, p_perm] = h2_mat(pheno, kin, covar, 1000);
-cur_row = [h2, p_perm];
