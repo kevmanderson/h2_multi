@@ -20,8 +20,10 @@ function [h2, p_perm, jack_se] = h2_multi(P, K, X, n_perm, F)
 
 % -----
 P0 = eye(n_subj) - X/(X'*X)*X';
-[U,~,~] = svd(P0); U = U(:,1:n_subj-n_cov);
-P = U'*P*U; K = U'*K*U;
+[U,~,~] = svd(P0);
+U  = U(:,1:n_subj-n_cov);
+P  = U'*P*U;
+K  = U'*K*U;
 n_subj = n_subj-n_cov;
 %%
 kappa = trace(K^2)/n_subj;
